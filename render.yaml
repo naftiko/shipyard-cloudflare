@@ -1,0 +1,15 @@
+# Render Blueprint — https://render.com/docs/blueprint-spec
+# Auto-deployed when a user clicks the "Deploy to Render" button.
+# Render reads PORT env var; the Naftiko engine's MCP server binds on 3001.
+services:
+  - type: web
+    name: naftiko-shipyard
+    runtime: docker
+    plan: starter
+    region: oregon
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    healthCheckPath: /
+    envVars:
+      - key: PORT
+        value: "3001"
