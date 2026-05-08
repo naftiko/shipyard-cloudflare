@@ -1,0 +1,18 @@
+name = "naftiko-shipyard-cloudflare"
+main = "src/index.ts"
+compatibility_date = "2026-05-06"
+compatibility_flags = ["nodejs_compat"]
+
+[[containers]]
+class_name = "ShipyardContainer"
+image = "./Dockerfile"
+instance_type = "standard-1"
+max_instances = 1
+
+[[durable_objects.bindings]]
+name = "SHIPYARD"
+class_name = "ShipyardContainer"
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["ShipyardContainer"]

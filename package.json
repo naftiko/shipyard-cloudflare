@@ -1,0 +1,19 @@
+{
+  "name": "naftiko-shipyard-cloudflare",
+  "version": "1.0.0",
+  "private": true,
+  "description": "One-click Cloudflare Containers deploy of the Naftiko Shipyard end-to-end capability — the cumulative final state of the Naftiko Framework Shipyard tutorial (step-11-shipyard-fleet-manifest).",
+  "scripts": {
+    "deploy": "npx wrangler deploy",
+    "dev": "npx wrangler dev",
+    "tail": "npx wrangler tail"
+  },
+  "dependencies": {
+    "@cloudflare/containers": "^0.0.13"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20250401.0",
+    "typescript": "^5.4.5",
+    "wrangler": "^4.0.0"
+  }
+}
